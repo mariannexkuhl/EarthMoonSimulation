@@ -36,7 +36,7 @@ ax.grid(False)
 ax.set_axis_off()
 
 #making the earth look like earth and adding rotation
-earth_texture = Image.open("earth_visual.jpg")
+#earth_texture = Image.open("earth_visual.jpg")
 
 def plot_earth(rotation_angle):
     u = np.linspace(0, 2 * np.pi, 100)
@@ -49,7 +49,7 @@ def plot_earth(rotation_angle):
     x_rot = x * np.cos(rotation_angle) - y * np.sin(rotation_angle)
     y_rot = x * np.sin(rotation_angle) + y * np.cos(rotation_angle)
     
-    ax.plot_surface(x_rot, y_rot, z, rstride=1, cstride=1, facecolors=np.array(earth_texture) / 255.0)
+    ax.plot_surface(x_rot, y_rot, z, rstride=1, cstride=1, facecolors=green / 255.0)
 
 earth_rotation_speed = (2 * np.pi) / (T_earth_rotation / dt)  # Rotation per time step
 
