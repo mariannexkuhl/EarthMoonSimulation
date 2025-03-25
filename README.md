@@ -2,6 +2,8 @@
 
 This project simulates the orbital dynamics between the Earth and the Moon using Python.
 
+ <img src="animation.gif" alt="animation" width="400"/>
+
 ## Installation
 
 1. Clone the repository:
