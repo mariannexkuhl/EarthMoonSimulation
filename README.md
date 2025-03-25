@@ -6,7 +6,7 @@ This project simulates the orbital dynamics between the Earth and the Moon using
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/EarthMoonSimulation.git
+    git clone https://github.com/mariannexkuhl/EarthMoonSimulation.git
     ```
 2. Navigate to the project directory:
     ```sh
