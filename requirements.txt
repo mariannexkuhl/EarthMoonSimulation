@@ -1,4 +1,4 @@
-matplotlib
-numpy
-Pillow
+matplotlib==3.7.1
+numpy==1.24.3
+Pillow==9.4.0
 
