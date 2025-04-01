@@ -10,7 +10,7 @@ This project requires the following Python libraries:
 
 - `numpy` – for numerical calculations  
 - `matplotlib` – for visualization  
-- `pillow' - for handling and saving images
+- `pillow` - for handling and saving images
 
 These dependencies will be installed automatically using the steps below.
 
