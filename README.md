@@ -6,10 +6,10 @@ This project simulates the orbital dynamics between the Earth and the Moon using
 
 ## Dependencies
 
-This project requires the following Python libraries:  
+This project requires the following Python libraries:
 
-- `numpy` – for numerical calculations  
-- `matplotlib` – for visualization  
+- `numpy` – for numerical calculations
+- `matplotlib` – for visualization
 - `pillow` - for handling and saving images
 
 These dependencies will be installed automatically using the steps below.
@@ -17,24 +17,33 @@ These dependencies will be installed automatically using the steps below.
 ## Installation
 
 1. Clone the repository:
-    ```sh
-    git clone https://github.com/mariannexkuhl/EarthMoonSimulation.git
-    ```
+   ```sh
+   git clone https://github.com/mariannexkuhl/EarthMoonSimulation.git
+   ```
 2. Navigate to the project directory:
-    ```sh
-    cd EarthMoonSimulation
-    ```
-3. Install the required dependencies:
-    ```sh
-    pip install -r requirements.txt
-    ```
+   ```sh
+   cd EarthMoonSimulation
+   ```
+3. Create a virtual environment and activate it:
+
+   ```sh
+   python -m venv venv
+   source venv/bin/activate
+   ```
+
+4. Install the required dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
 To run the simulation, use the following command:
+
 ```sh
 python Earth_Moon_Simulation.py
 ```
+
 ## Technical Details
 
 This simulation models the Earth-Moon system using Newton's law of universal gravitation:
@@ -42,14 +51,15 @@ This simulation models the Earth-Moon system using Newton's law of universal gra
 `F = G * (m1 * m2) / r^2`
 
 where:
+
 - F is the gravitational force
-- G  is the gravitational constant
-- m_1  and  m_2  are the masses of the Earth and Moon respectively
+- G is the gravitational constant
+- m_1 and m_2 are the masses of the Earth and Moon respectively
 - r is the distance between their centers
 
 ### Numerical Integration
 
-- The equations of motion are solved using explicit Euler integration to update the position and velocities of both bodies at each time step. 
+- The equations of motion are solved using explicit Euler integration to update the position and velocities of both bodies at each time step.
 - The time step dt is chosen to balance accuracy and computational efficiency. In this simulation it was chosen to be 1 hour (3600 seconds).
 
 ### Visualization
@@ -60,10 +70,9 @@ where:
 
 ### Assumptions & Limitations
 
-- Gravitational influence and perturbations from all other bodies are ignored, including the Sun's 
+- Gravitational influence and perturbations from all other bodies are ignored, including the Sun's
 - The Earth and Moon are treated as point masses
 - The Earth's rotation does not influence the Moon’s motion in this model
-
 
 ## Contributing
 
