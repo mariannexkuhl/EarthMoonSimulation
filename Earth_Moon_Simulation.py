@@ -5,6 +5,15 @@ Created on Wed Feb 26 21:22:38 2025
 
 @author: Marianne2
 """
+# This simulation models the gravitational interaction between the Earth and the Moon.
+# It computes their positions and velocities over time using Newton's law of gravitation and explicit Euler integration.
+# The simulation also includes the Earth's axial rotation, although this is not taken into account in the gravitational calculations.
+# The motion is calculated based on an initial set of parameters, including masses,
+# initial positions, velocities, and time step. The results are used to plot the 
+# trajectories of the Earth and Moon, with the simulation running for a specified 
+# duration and time step size. 
+
+
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -36,9 +45,26 @@ ax.grid(False)
 ax.set_axis_off()
 
 #making the earth look like earth and adding rotation
-earth_texture = Image.open("earth_visual.jpg")
+#earth_texture = Image.open("earth_visual.jpg")
 
 def plot_earth(rotation_angle):
+    """
+    Plots a 3D model of the Earth with a given rotation angle.
+
+    The function generates a spherical representation of the Earth using a 
+    parametric surface plot and applies a rotation transformation around 
+    the z-axis.
+
+    Parameters:
+    -----------
+    rotation_angle : float
+        The angle (in radians) by which the Earth is rotated around the z-axis.
+
+    Returns:
+    --------
+    None
+        The function modifies the global 3D plot by adding the Earth's surface.
+    """
     u = np.linspace(0, 2 * np.pi, 100)
     v = np.linspace(0, np.pi, 50)
     x = R_earth * np.outer(np.cos(u), np.sin(v))
@@ -49,7 +75,7 @@ def plot_earth(rotation_angle):
     x_rot = x * np.cos(rotation_angle) - y * np.sin(rotation_angle)
     y_rot = x * np.sin(rotation_angle) + y * np.cos(rotation_angle)
     
-    ax.plot_surface(x_rot, y_rot, z, rstride=1, cstride=1, facecolors=np.array(earth_texture) / 255.0)
+    ax.plot_surface(x_rot, y_rot, z, rstride=1, cstride=1, facecolors=green / 255.0)
 
 earth_rotation_speed = (2 * np.pi) / (T_earth_rotation / dt)  # Rotation per time step
 
